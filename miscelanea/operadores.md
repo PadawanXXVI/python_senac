@@ -42,19 +42,22 @@ Esses operadores são utilizados no momento da atribuição de valores à variá
 | /= | x = x / 1 | A variável x recebe o próprio valor e divide por 1 |
 | %= | x = x % 1 | A variável x recebe o próprio valor de x e retorna o valor do resto da divisão por 1 |
 
-Observação:<br> Nos exemplos, sempre foram utilizados o valor 1 para incrementação, mas pode ser usado qualquer valor.<br>
-Exemplo:<br> x %= 2 -> retorna o valor do resto da divisão do próprio valor de x por 2.
+Observação:
+
+Nos exemplos, sempre foram utilizados o valor 1 para incrementação, mas pode ser usado qualquer valor.
+
+Exemplo:
+x %= 2 -> retorna o valor do resto da divisão do próprio valor de x por 2.
 
 ## Operadores lógicos
 
 Esses operadores nos possibilitam construir um tipo de teste muito útil e muito utilizado em qualquer programa Python: os testes lógicos.
 
-| Operador | Definição
+| Operador | Definição |
 | :-: | - |
 | and | Retorna True se todas as afirmações forem verdadeiras |
 | or | Retorna True se, pelo menos, uma afirmação for verdadeira |
 | not | retorna False se o valor for verdadeiro (o operador not altera o valor para o oposto: True vira False e False vira True) |
-
 
 ## Operadores de identidade
 
@@ -73,4 +76,3 @@ Esses operadores servem para verificar se determinado objeto está associado ou 
 | :-: | - |
 | in | Retorna True caso o valor seja encontrado na sequencia |
 | not in | Retonra True caso o valor não seja encontrado na sequencia |
-
