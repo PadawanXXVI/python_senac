@@ -2,7 +2,8 @@ from conexao import abrir_conexao, fechar_conexao
 
 def insere_usuario(con, cod, nome, cidade, data_cadastro):
     cursor = con.cursor()
-    sql = "inser into usuario values (%s,%s,%s,%s)"
+    cod = nome = cidade = data_cadastro = None
+    sql = f"inser into usuario values ({cod},{nome},{cidade},{data_cadastro})"
     cursor.excute(sql)
     cursor.close()
     con.commit()
