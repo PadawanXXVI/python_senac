@@ -6,5 +6,6 @@ Abaixo segue o link para o projeto final, cujo objetivo é demonstrar o conhecim
 - CRUD
 - Criação de funções
 - Uso de bibliotecas
+- Uso de f-strings
 
 [Projeto Final](projeto_final/)
