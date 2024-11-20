@@ -35,6 +35,7 @@ def gerar_comprovante(carrinho, total, desconto, total_com_desconto, pagamento, 
 
 # Função para adicionar produto ao carrinho (CREATE)
 def adicionar_produto(carrinho):
+    carrinho = list()
     produto = input("Digite o nome do produto: ")
     quantidade = int(input("Digite a quantidade: "))
     valor_unitario = float(input("Digite o valor unitário: "))
