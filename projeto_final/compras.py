@@ -81,7 +81,7 @@ def main():
 
     while True:
         print('-'*90)
-        print(f"{'Menu:':^90}")
+        print(f"{'MENU':^90}")
         print('-'*90)
         print("1. Adicionar produto")
         print("2. Remover produto")
@@ -90,6 +90,7 @@ def main():
         print("5. Finalizar compra")
         print("6. Sair")
         escolha = input("Escolha uma opção: ")
+        print('-'*90)
 
         if escolha == '1':
             carrinho = adicionar_produto(carrinho)
