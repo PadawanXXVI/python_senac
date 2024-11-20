@@ -7,5 +7,6 @@ Abaixo segue o link para o projeto final, cujo objetivo é demonstrar o conhecim
 - Criação de funções
 - Uso de bibliotecas
 - Uso de f-strings
+- Laços de repetição
 
 [Projeto Final](projeto_final/)
