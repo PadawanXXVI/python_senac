@@ -33,7 +33,7 @@ def gerar_comprovante(carrinho, total, desconto, total_com_desconto, pagamento, 
 
     pdf.output("comprovante.pdf")
 
-# Função para adicionar produto ao carrinho
+# Função para adicionar produto ao carrinho (CREATE)
 def adicionar_produto(carrinho):
     produto = input("Digite o nome do produto: ")
     quantidade = int(input("Digite a quantidade: "))
@@ -43,13 +43,13 @@ def adicionar_produto(carrinho):
     carrinho = carrinho.append(novo_produto, ignore_index=True)
     return carrinho
 
-# Função para remover produto do carrinho
+# Função para remover produto do carrinho (DELETE)
 def remover_produto(carrinho):
     produto = input("Digite o nome do produto a ser removido: ")
     carrinho = carrinho[carrinho['Produto'] != produto]
     return carrinho
 
-# Função para atualizar produto no carrinho
+# Função para atualizar produto no carrinho (UPDATE)
 def atualizar_produto(carrinho):
     produto = input("Digite o nome do produto a ser atualizado: ")
     if produto in carrinho['Produto'].values:
@@ -62,11 +62,24 @@ def atualizar_produto(carrinho):
         print("Produto não encontrado.")
     return carrinho
 
-# Função para exibir o carrinho
+# Função para exibir o carrinho (READ)
 def exibir_carrinho(carrinho):
     print("\nCarrinho de Compras:")
     print(carrinho)
-    print(f"\nTotal: R${calcular_total(carrinho):.2f}")
+    print("\nTotal: R${:.2f}".format(calcular_total(carrinho)))
+
+# Função para exibir o menu
+def exibir_menu():
+    print("\n" + "="*35)
+    print(f"{'Menu de Compras':^35}")
+    print("="*35)
+    print(f"1.{'Adicionar produto':>32}")
+    print(f"2.{'Remover produto':>32}")
+    print(f"3.{'Atualizar produto':>32}")
+    print(f"4.{'Exibir carrinho':>32}")
+    print(f"5.{'Finalizar compra':>32}")
+    print(f"6.{'Sair':>32}")
+    print("="*35)
 
 # Função principal
 def main():
@@ -80,17 +93,8 @@ def main():
     carrinho['Total'] = carrinho['Quantidade'] * carrinho['Valor Unitário']
 
     while True:
-        print('-'*50)
-        print(f"{'MENU':^50}")
-        print('-'*90)
-        print(f"1. {'Adicionar produto':<50}")
-        print("2. Remover produto")
-        print("3. Atualizar produto")
-        print("4. Exibir carrinho")
-        print("5. Finalizar compra")
-        print("6. Sair")
+        exibir_menu()
         escolha = input("Escolha uma opção: ")
-        print('-'*90)
 
         if escolha == '1':
             carrinho = adicionar_produto(carrinho)
