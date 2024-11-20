@@ -66,7 +66,7 @@ def atualizar_produto(carrinho):
 def exibir_carrinho(carrinho):
     print("\nCarrinho de Compras:")
     print(carrinho)
-    print("\nTotal: R${:.2f}".format(calcular_total(carrinho)))
+    print(f"\nTotal: R${calcular_total(carrinho):.2f}")
 
 # Função principal
 def main():
@@ -80,10 +80,10 @@ def main():
     carrinho['Total'] = carrinho['Quantidade'] * carrinho['Valor Unitário']
 
     while True:
+        print('-'*50)
+        print(f"{'MENU':^50}")
         print('-'*90)
-        print(f"{'MENU':^90}")
-        print('-'*90)
-        print("1. Adicionar produto")
+        print(f"1. {'Adicionar produto':<50}")
         print("2. Remover produto")
         print("3. Atualizar produto")
         print("4. Exibir carrinho")
